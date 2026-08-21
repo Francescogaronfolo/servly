@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servly | Demo piattaforma servizi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="screen active" id="home-screen">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Demo senza costi reali</p>
+          <h1>Servly</h1>
+          <p>Richieste di servizio, fornitori e contatti operativi nella tua zona. Il credito e gli sblocchi sono simulati.</p>
+        </div>
+        <div class="wallet">
+          <span>Credito demo</span>
+          <strong data-wallet>5,00 euro</strong>
+        </div>
+      </header>
+
+      <form class="search-panel" data-search-form>
+        <label>
+          <span>Cosa cerchi</span>
+          <input name="query" type="search" placeholder="Pulizie, giardinaggio, sgombero...">
+        </label>
+        <label>
+          <span>Luogo</span>
+          <input name="place" type="search" placeholder="Milano, Legnano, Magenta...">
+        </label>
+        <button type="submit">Cerca</button>
+      </form>
+
+      <section class="section-block">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">In evidenza</p>
+            <h2>Vetrina rotante</h2>
+          </div>
+          <span>Spazio demo, domani abbonamento</span>
+        </div>
+        <div class="featured-grid" data-featured></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Esplora</p>
+            <h2>Richieste e fornitori</h2>
+          </div>
+          <button class="soft-button" type="button" data-shuffle>Ricalcola</button>
+        </div>
+        <div class="market-grid" data-market></div>
+      </section>
+    </section>
+
+    <section class="screen" id="detail-screen">
+      <button class="back-button" type="button" data-back>Indietro</button>
+      <article class="detail-card" data-detail></article>
+    </section>
+
+    <section class="screen" id="contacts-screen">
+      <header class="simple-head">
+        <p class="eyebrow">Area personale</p>
+        <h1>Contatti</h1>
+        <p>Qui restano gli enti sbloccati e le trattative da seguire. Per ora e tutto locale, solo demo.</p>
+      </header>
+      <div class="inbox" data-unlocked-list></div>
+    </section>
+
+    <section class="screen" id="profile-screen">
+      <header class="simple-head">
+        <p class="eyebrow">Impostazioni</p>
+        <h1>Profilo demo</h1>
+        <p>Dati di esempio per capire come si registrerebbe un fornitore o un ente.</p>
+      </header>
+      <form class="profile-form" data-profile-form>
+        <label>
+          Nome ente o azienda
+          <input name="name" required>
+        </label>
+        <label>
+          Zona principale
+          <input name="place" required>
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required>
+        </label>
+        <label>
+          Telefono
+          <input name="phone" required>
+        </label>
+        <label>
+          P.IVA, se presente
+          <input name="vat">
+        </label>
+        <label>
+          Sito web / profilo social
+          <input name="website" placeholder="https://...">
+        </label>
+        <label class="wide">
+          Descrizione
+          <textarea name="description" rows="5"></textarea>
+        </label>
+        <button type="submit">Salva profilo</button>
+      </form>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Navigazione">
+      <button class="active" type="button" data-nav="home-screen">Home</button>
+      <button type="button" data-nav="contacts-screen">Contatti</button>
+      <button type="button" data-nav="profile-screen">Profilo</button>
+    </nav>
+  </main>
+
+  <div class="toast" data-toast></div>
+  <script src="app.js"></script>
+</body>
+</html>
